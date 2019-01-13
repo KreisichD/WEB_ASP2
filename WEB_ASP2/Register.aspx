@@ -87,6 +87,13 @@
 						<asp:RangeValidator ID="phoneRangeValidator" runat="server" ErrorMessage="Wrong number (use 9 digits)" ControlToValidate="phoneTB" Display="Dynamic" MaximumValue="999999999" MinimumValue="100000000" Type="Integer"></asp:RangeValidator>
 						<asp:RequiredFieldValidator ID="phoneRequiredValidator" ControlToValidate="phoneTB" runat="server" ErrorMessage="This field is required" Display="Dynamic"></asp:RequiredFieldValidator>
 					</div>
+
+                    <div class="off1 col3">
+                        Password:
+                    </div>
+                    <div class="col4">
+                        <asp:TextBox ID="passTB" runat="server" CssClass="col4" TextMode="Password"></asp:TextBox>
+                    </div>
 				</div>
 
 				<div class="off4 col2">
