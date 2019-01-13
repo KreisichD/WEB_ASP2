@@ -85,6 +85,7 @@
     <EnableFullTextSearch>True</EnableFullTextSearch>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
     <CreateProjectFromDatabaseCompleted>True</CreateProjectFromDatabaseCompleted>
+    <DacApplicationName>DataBase</DacApplicationName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -108,6 +109,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <SqlTargetName>DataBase</SqlTargetName>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -126,5 +128,9 @@
     <Build Include="dbo\Tables\uzytkownik.sql" />
     <Build Include="dbo\Tables\kurs.sql" />
     <Build Include="dbo\Tables\kurs_uzytkownik.sql" />
+    <Compile Include="dbo\SeedUsers.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbo\SeedCourses.sql" />
   </ItemGroup>
 </Project>
