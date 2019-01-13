@@ -25,13 +25,24 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WEB_ASP2", "WEB_ASP2\", "{3
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database1", "WEB_ASP2\Database1\Database1.sqlproj", "{74983565-FB8A-4D4E-A971-8B51238BF9E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{38B910ED-63FB-4ED4-8180-AE72D89B75F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38B910ED-63FB-4ED4-8180-AE72D89B75F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B910ED-63FB-4ED4-8180-AE72D89B75F9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B910ED-63FB-4ED4-8180-AE72D89B75F9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{74983565-FB8A-4D4E-A971-8B51238BF9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74983565-FB8A-4D4E-A971-8B51238BF9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74983565-FB8A-4D4E-A971-8B51238BF9E6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{74983565-FB8A-4D4E-A971-8B51238BF9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74983565-FB8A-4D4E-A971-8B51238BF9E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74983565-FB8A-4D4E-A971-8B51238BF9E6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
