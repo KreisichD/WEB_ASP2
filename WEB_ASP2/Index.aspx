@@ -1,46 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Index" MasterPageFile="Site.master" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Checkout our blogging news and recent updates in code databases">
-	<meta name="keywords" content="Code, tutorial, blog, feed, social, playground">
-	<meta name="author" content="D & P">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>News</title>
-	<link rel="stylesheet" type="text/css" href="Styles/MainLayout.css" />
-	<link rel="stylesheet" type="text/css" href="Styles/Table.css" />
-	
-</head>
-<body>
-	<div class="container">
-		<header class="row">
-			<a href="index.aspx"><div class="col8"><img src="MediaFiles/logo.png" alt="logo" /></div></a>
-		</header>
-		<nav class="row">
-			<div class="col2 mtopbottom"><a href="Game.aspx">Let's play a game</a></div>
-			<div class="off5 col1 mtopbottom"><a href="Register.aspx">Register</a> or <a href="Login.aspx">Login</a></div>
-			<div class="col2s hiddenMenu">
-				<span class="col8s">Menu</span>
-				<ul id="standardMenu" class="col8">
-					<li><a href="index.aspx">News</a></li>
-					<li><a href="CodeSite.aspx">Code Site</a></li>
-					<li>
-						Links
-						<ol>
-							<li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
-							<li><a href="https://github.com/KreisichD/WebProjectPWR" target="_blank">Our GitHub</a></li>
-							<li><a href="#">Dev tools reviews</a></li>
-						</ol>
-					</li>
-					<li><a href="AboutUs.aspx">About us</a></li>
-					<li><a href="Contact.aspx">Contact</a></li>
-				</ul>
-			</div>
-			<div class="menuoffs"></div>
-		</nav>
-		<article class="row">
+<asp:Content ID="indexHeadContent" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" type="text/css" href="Styles/Table.css" />
+</asp:Content>
+
+<asp:Content ID="indexMainContent" ContentPlaceHolderID="MainContent" runat="server">
+    <article class="row">
 			<h1 class="col8">News</h1>
 
 			<h2 class="col8 text-center"><mark>Power</mark> function</h2>
@@ -81,10 +46,5 @@
 				<p class="col8"><a href="https://docs.python.org/3/library/functions.html#pow">Python Docs</a></p>
 			</details>
 		</article>
-		<footer class="row">
-			<div class="col8 text-center"><img src="MediaFiles/logo.png" alt="logo_mini" width="15" height="15" /> D &amp; P &copy; 2018 D &amp; P. All rights reserved.</div>
-		</footer>
-	</div>
-</body>
-</html>
+</asp:Content>
 
