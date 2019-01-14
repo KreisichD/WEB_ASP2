@@ -8,10 +8,22 @@ using System.Web;
 /// </summary>
 public class CartItem
 {
+	private int Id;
+	private String Name;
+	private String Description;
+	private double Cost;
+
+
+
     public CartItem()
     {
-        //
-        // TODO: Add constructor logic here
-        //
+       
     }
+	public CartItem(int Id, String Name, String Description, double Cost)
+	{
+		this.Id = Id;
+		this.Name = Name;
+		this.Description = Description;
+		this.Cost = Cost;
+	}
 }
