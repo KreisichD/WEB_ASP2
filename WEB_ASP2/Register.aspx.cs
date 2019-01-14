@@ -9,6 +9,7 @@ public partial class Register : System.Web.UI.Page
 {
 	protected void Page_Load(object sender, EventArgs e)
 	{
+        Title = "Register";
 		outputLabel.Visible = false;
 
 		if(IsPostBack)
