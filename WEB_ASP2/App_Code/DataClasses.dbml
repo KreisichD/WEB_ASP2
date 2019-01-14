@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataBase" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DataBase;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DataBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.kurs" Member="kurs">
+    <Type Name="kurs">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Cost" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Association Name="kurs_kurs_uzytkownik" Member="kurs_uzytkownik" ThisKey="Id" OtherKey="IdKursu" Type="kurs_uzytkownik" />
+    </Type>
+  </Table>
+  <Table Name="dbo.uzytkownik" Member="uzytkownik">
+    <Type Name="uzytkownik">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="uzytkownik_kurs_uzytkownik" Member="kurs_uzytkownik" ThisKey="Id" OtherKey="IdUzytkownika" Type="kurs_uzytkownik" />
+    </Type>
+  </Table>
+  <Table Name="dbo.kurs_uzytkownik" Member="kurs_uzytkownik">
+    <Type Name="kurs_uzytkownik">
+      <Column Name="IdKursu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdUzytkownika" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="kurs_kurs_uzytkownik" Member="kurs" ThisKey="IdKursu" OtherKey="Id" Type="kurs" IsForeignKey="true" />
+      <Association Name="uzytkownik_kurs_uzytkownik" Member="uzytkownik" ThisKey="IdUzytkownika" OtherKey="Id" Type="uzytkownik" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
