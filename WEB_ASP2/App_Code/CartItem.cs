@@ -8,10 +8,45 @@ using System.Web;
 /// </summary>
 public class CartItem
 {
-    public CartItem()
+    private string title;
+    private double price;
+
+    public CartItem(string title, double price)
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        this.Title = title;
+        this.Price = price;
     }
+
+    public double Price
+    {
+        get
+        {
+            return price;
+        }
+
+        set
+        {
+            price = value;
+        }
+    }
+
+    public string Title
+    {
+        get
+        {
+            return title;
+        }
+
+        set
+        {
+            title = value;
+        }
+    }
+
+    public string getInfo()
+    {
+        return String.Format("{0} - {1}", Title, Price);
+    }
+
+    
 }
