@@ -47,6 +47,4 @@ public class CartItem
     {
         return String.Format("{0} - {1}", Title, Price);
     }
-
-    
 }

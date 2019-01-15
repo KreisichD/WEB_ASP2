@@ -1,11 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Index" MasterPageFile="Site.master" %>
 
 <asp:Content ID="indexHeadContent" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="Styles/Table.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/Table.css" />
 </asp:Content>
 
 <asp:Content ID="indexMainContent" ContentPlaceHolderID="MainContent" runat="server">
-    <article class="row">
+	<article class="row">
 			<h1 class="col8">News</h1>
 
 			<h2 class="col8 text-center"><mark>Power</mark> function</h2>
@@ -45,6 +45,11 @@
 				<p class="col8"><a href="https://www.w3schools.com/jsref/jsref_pow.asp">Javascript Docs</a></p>
 				<p class="col8"><a href="https://docs.python.org/3/library/functions.html#pow">Python Docs</a></p>
 			</details>
-		</article>
+
+			<div class="off1 col4 mtopbottom"><a href="Objects.aspx">Sprawdź bazę danych</a></div>
+			<div class="off1 col4 mtopbottom"><a href="ProtectedForm.aspx">Super secret form!!!!</a></div>
+			
+
+	</article>
 </asp:Content>
 
