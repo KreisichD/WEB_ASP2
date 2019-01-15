@@ -14,44 +14,45 @@
         <asp_ajax:TabContainer ID="tabContainer" runat="server" ActiveTabIndex="0" Width="450px">
             <asp_ajax:TabPanel ID="tab1" HeaderText="Name" runat="server">
                 <ContentTemplate>
-                    <div class="off1 col3">
-                        First name:
-                    </div>
-                    <div class="col4">
-                        <asp:TextBox ID="firstNameTB" runat="server" CssClass="col4"></asp:TextBox>
+                    <p>
+                        <label>
+                            First name:
+                            <asp:TextBox ID="firstNameTB" runat="server" ></asp:TextBox>
+                        </label>
+                        <br />
                         <asp:RequiredFieldValidator ID="firstNameValidator" ControlToValidate="firstNameTB" runat="server" ErrorMessage="This field is required" Display="None"></asp:RequiredFieldValidator>
                         <asp_ajax:ValidatorCalloutExtender ID="firstNameValidator_calloutExtender" runat="server" Enabled="true" TargetControlID="firstNameValidator"></asp_ajax:ValidatorCalloutExtender>
-                    </div>
 
-                    <div class="off1 col3">
-                        Last name:
-                    </div>
-                    <div class="col4">
-                        <asp:TextBox ID="lastNameTB" runat="server" CssClass="col4"></asp:TextBox>
+                    </p>
+                    <p>
+                        <label>
+                            Last name:
+                            <asp:TextBox ID="lastNameTB" runat="server" ></asp:TextBox>
+                        </label>
                         <asp:RequiredFieldValidator ID="lastNameValidator" ControlToValidate="lastNameTB" runat="server" ErrorMessage="This filed is required" Display="None"></asp:RequiredFieldValidator>
                         <asp_ajax:ValidatorCalloutExtender ID="lastNameValidator_calloutExtender" runat="server" Enabled="true" TargetControlID="lastNameValidator"></asp_ajax:ValidatorCalloutExtender>
-                    </div>
+                    </p>
                 </ContentTemplate>
             </asp_ajax:TabPanel>
 
             <asp_ajax:TabPanel ID="tab2" HeaderText="Contact" runat="server">
                 <ContentTemplate>
-                    <div class="off1 col3">
-                        Email adress:
-                    </div>
-                    <div class="col4">
-                        <asp:TextBox ID="emailTB" runat="server" CssClass="col4"></asp:TextBox>
+                    <p>
+                        <label>
+                            Email adress:
+
+                        <asp:TextBox ID="emailTB" runat="server"></asp:TextBox></label>
                         <asp:RegularExpressionValidator ID="emailRegexpValidator" runat="server" ErrorMessage="Wrong email format" ControlToValidate="emailTB" Display="None" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         <asp_ajax:ValidatorCalloutExtender ID="emailRegexpValidator_calloutExtender" runat="server" Enabled="true" TargetControlID="emailRegexpValidator"></asp_ajax:ValidatorCalloutExtender>
-                    </div>
-                    <div class="off1 col3">
-                        Phone number:
-                    </div>
-                    <div class="col4">
-                        <asp:TextBox ID="phoneTB" runat="server" CssClass="col4"></asp:TextBox>
+                    </p>
+                    <p>
+                        <label>
+                            Phone number:
+
+                        <asp:TextBox ID="phoneTB" runat="server"></asp:TextBox></label>
                         <asp:RangeValidator ID="phoneRangeValidator" runat="server" ErrorMessage="Wrong number (use 9 digits)" ControlToValidate="phoneTB" Display="None" MaximumValue="999999999" MinimumValue="100000000" Type="Integer"></asp:RangeValidator>
                         <asp_ajax:ValidatorCalloutExtender ID="phoneRangeValidator_calloutExtender" runat="server" Enabled="true" TargetControlID="phoneRangeValidator"></asp_ajax:ValidatorCalloutExtender>
-                    </div>
+                    </p>
                 </ContentTemplate>
             </asp_ajax:TabPanel>
         </asp_ajax:TabContainer>
