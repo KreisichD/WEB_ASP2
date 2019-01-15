@@ -47,6 +47,9 @@
 			</details>
 
 			<div class="off1 col4 mtopbottom"><a href="Objects.aspx">Sprawdź bazę danych</a></div>
-		</article>
+			<div class="off1 col4 mtopbottom"><a href="ProtectedForm.aspx">Super secret form!!!!</a></div>
+			
+
+	</article>
 </asp:Content>
 
